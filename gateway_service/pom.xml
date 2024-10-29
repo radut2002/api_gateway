@@ -8,10 +8,10 @@
         <version>2.7.6</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.sample</groupId>
+    <groupId>com.gateway</groupId>
     <artifactId>gateway_service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <name>gateway_service</name>
     <description>gateway_service</description>
     <properties>
@@ -20,16 +20,18 @@
     </properties>
     <dependencies>
 
+       <!-- https://mvnrepository.com/artifact/javax.json.bind/javax.json.bind-api -->
+    <dependency>
+        <groupId>javax.json.bind</groupId>
+        <artifactId>javax.json.bind-api</artifactId>
+        <version>1.0</version>
+    </dependency>
+
+
         <!--Gateway-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-gateway</artifactId>
-        </dependency>
-
-        <!--Eureka client-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
         <!--Servlet api-->
